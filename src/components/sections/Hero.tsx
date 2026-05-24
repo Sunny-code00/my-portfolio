@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import App from "@/components/band/App";
+//import App from "@/components/band/App";
 import TextType from "@/components/band/TextType";
 
 const skills = ["Linux", "Docker", "NGINX", "Java", "Networking"];
@@ -60,7 +60,7 @@ export default function Hero({ showApp }: HeroProps) {
           pointerEvents: showApp ? "auto" : "none",
         }}
       >
-        {showApp && <App />}
+     {/*   {showApp && <App />}   */}
       </div>
 
       {/* TEXT */}

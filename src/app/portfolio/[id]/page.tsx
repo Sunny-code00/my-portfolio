@@ -6,7 +6,6 @@
 import { useEffect, useState } from 'react'
 import { useParams, useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
-import { supabase } from '@/lib/supabase'
 import {
   ArrowLeft,
   ChevronLeft,
@@ -37,22 +36,6 @@ export default function PortfolioDetailPage() {
 
   const [currentImage, setCurrentImage] = useState(0)
   const [previewOpen, setPreviewOpen] = useState(false)
-
-  useEffect(() => {
-    fetchProject()
-  }, [])
-
-  const fetchProject = async () => {
-    const { data } = await supabase
-      .from('projects')
-      .select('*')
-      .eq('id', id)
-      .single()
-
-    if (data) {
-      setProject(data)
-    }
-  }
 
   const tech = (project?.technologies || '')
     .split(',')

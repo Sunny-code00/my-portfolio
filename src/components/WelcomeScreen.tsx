@@ -129,10 +129,14 @@ export default function WelcomeScreen() {
                 ease: [0.22, 1, 0.36, 1],
               }}
               style={{
-                fontSize: 'clamp(18px, 3vw, 30px)',
-                fontWeight: 800,
-                letterSpacing: '-0.05em',
-              }}
+               fontSize: 'clamp(18px, 3vw, 30px)',
+               fontWeight: 800,
+               letterSpacing: '-0.05em',
+               lineHeight: 1.15,
+               margin: 0,
+               textAlign: 'center',
+               whiteSpace: 'nowrap',
+            }}
             >
               Welcome
             </motion.span>
